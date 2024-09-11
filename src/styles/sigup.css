@@ -1,0 +1,92 @@
+body {
+    font-family: var(--font-mono);
+    background-color: #f5f5f5; /* Fondo claro para el cuerpo, puedes cambiarlo si quieres usar otro color */
+  }
+  
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin-top: -70px;
+  }
+  
+  section h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    color: #002F6C; /* Azul Navy */
+  }
+  
+  section form {
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 2px solid #B87333; /* Cobre */
+    background-color: #ffffff; /* Blanco, puedes cambiar a otro color si lo prefieres */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  section form label {
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: #333333; /* Color del texto en etiquetas */
+  }
+  
+  section form input {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 5px;
+    border: 1px solid #cccccc; /* Puedes ajustar si necesitas un color diferente aquí */
+    background-color: #f9f9f9; /* Fondo claro para los campos de entrada */
+    text-align: center;
+    color: #000000; /* Color del texto en los campos de entrada */
+  }
+  
+  section form input[type="submit"] {
+    background-color: #002F6C; /* Azul Navy */
+    color: #ffffff; /* Blanco para el texto del botón */
+    font-family: var(--font-mono);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+  }
+  
+  section form input[type="submit"]:hover {
+    background-color: #0056b3; /* Azul más oscuro para hover, puedes cambiar a otro tono si prefieres */
+  }
+  
+  section form input[type="submit"]:active {
+    transform: scale(0.98);
+  }
+  
+  #alerta, #error {
+    margin-top: 1em;
+    text-align: center;
+  }
+  
+  #error {
+    color: #dc3545; /* Rojo para errores, puedes cambiarlo si quieres usar otro color */
+  }
+  
+  #alerta {
+    color: #28a745; /* Verde para alertas, puedes cambiarlo si prefieres otro color */
+  }
+  
+  section p {
+    color: #333333; /* Color del texto en párrafos */
+  }
+  
+  section p a {
+    text-decoration: none;
+    color: #002F6C; /* Azul Navy para los enlaces */
+  }
+  

@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { getProducts } from "../Services/productos";
 import { postProducts } from "../Services/productos";
 import { useState } from "react";
+import "../styles/sigup.css"
 
 
 const FormRegistro = () => {

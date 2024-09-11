@@ -1,11 +1,5 @@
-import React from 'react'
-
 const ComHome = () => {
-  return (
-    <div>
-      el
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default ComHome
+export default ComHome;
