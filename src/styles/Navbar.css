@@ -98,3 +98,9 @@ body {
 .icono1{
   margin-right: 20px;
 }
+
+#CerrarSession{
+  margin-left: 10px;
+  cursor: pointer;
+  color: red;
+}

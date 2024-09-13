@@ -1,6 +1,7 @@
 import "../styles/Navbar.css";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import logo2 from "../img/logo2.png";
+import CerrarSession from "../Components/CerrarSession";
 
 const Navbar = () => {
   return (
@@ -30,7 +31,7 @@ const Navbar = () => {
           </a>
           <ul className="dropdown-menu">
             <li>
-              <a href="#">Action</a>
+              <a href="#">Perfil</a>
             </li>
             <li>
               <a href="#">Another action</a>
@@ -44,7 +45,7 @@ const Navbar = () => {
             </li>
             <li role="separator" className="divider"></li>
             <li>
-              <a href="#">One more separated link</a>
+            <CerrarSession />
             </li>
           </ul>
         </div>

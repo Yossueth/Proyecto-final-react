@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import { getProducts } from "../Services/productos";
-import { postProducts } from "../Services/productos";
+import { getUsers } from "../Services/users";
+import { postUsers } from "../Services/users";
 import { useState } from "react";
 import "../styles/sigup.css"
 
@@ -17,7 +17,7 @@ const FormRegistro = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const userList = await getProducts();
+    const userList = await getUsers();
     const userRegister = userList.find((user) => user.email === email);
 
     if (userRegister) {
@@ -33,7 +33,7 @@ const FormRegistro = () => {
       password: password,
     };
 
-    await postProducts(objectUsers);
+    await postUsers(objectUsers);
     setAlerta("Registro exitoso 👌");
     navigate("/");
   };

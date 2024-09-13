@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { getProducts } from "../Services/productos";
+import { getUsers } from "../Services/users";
 import "../styles/login.css"
 
 const FormLogin = () => {
@@ -14,7 +14,7 @@ const FormLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const userList = await getProducts();
+    const userList = await getUsers();
     const validUsers = userList.find((user) => user.email === email);
 
     if (!validUsers) {

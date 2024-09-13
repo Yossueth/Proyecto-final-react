@@ -1,5 +1,5 @@
 // GET
-export async function getTask() {
+export async function getUsers() {
     try {
       const response = await fetch("http://localhost:3000/users");
       if (!response.ok) {
@@ -14,7 +14,7 @@ export async function getTask() {
   }
   
   // POST
-  export async function postTask(data) {
+  export async function postUsers(data) {
     try {
       const response = await fetch("http://localhost:3000/users", {
         method: "POST",
@@ -37,7 +37,7 @@ export async function getTask() {
   }
   
   // PUT
-  export async function putTask(data, id) {
+  export async function putUsers(data, id) {
     try {
       const response = await fetch(`http://localhost:3000/users/${id}`, {
         method: "PUT",
@@ -61,7 +61,7 @@ export async function getTask() {
   
   
   // DELETE
-  export async function deleteTask(id) {
+  export async function deleteUsers(id) {
     try {
       const response = await fetch(`http://localhost:3000/users/${id}`, {
         method: "DELETE",

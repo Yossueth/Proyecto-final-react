@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "../styles/Navbar.css";
 
 function CerrarSession() {
   const navigate = useNavigate();
@@ -10,7 +11,9 @@ function CerrarSession() {
 
   return (
     <div>
-      <button id="btnCerrarSession" onClick={cerrarSesion}>Cerrar Sesión</button>
+      <p id="CerrarSession" onClick={cerrarSesion}>
+        Cerrar Sesión
+      </p>
     </div>
   );
 }
