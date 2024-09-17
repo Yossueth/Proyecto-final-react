@@ -17,12 +17,15 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-primario);
-  padding: 10px 20px;
+  padding: 20px 20px;
   color: var(--color-fondo);
 }
 
 .logo img {
-  height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+  top: 5px;
+  margin: -10px;
+  height: 80px;
+  position: absolute;
 }
 
 .search input {
@@ -95,11 +98,11 @@ body {
   display: block;
 }
 
-.icono1{
+.icono1 {
   margin-right: 20px;
 }
 
-#CerrarSession{
+#CerrarSession {
   margin-left: 10px;
   cursor: pointer;
   color: red;

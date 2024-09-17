@@ -1,0 +1,13 @@
+#modal {
+  margin-left: 10px;
+}
+
+#cerrarModal {
+  margin-left: 98%;
+  cursor: pointer;
+  color: red;
+  margin: 0px;
+  margin-left: 96%;
+  top: 1px;
+  position: absolute;
+}

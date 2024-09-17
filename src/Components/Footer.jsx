@@ -8,9 +8,6 @@ const Footer = () => {
           <h3>Enlaces</h3>
           <ul>
             <li>
-              <a href="#">Inicio</a>
-            </li>
-            <li>
               <a href="#">Servicios</a>
             </li>
             <li>
@@ -23,7 +20,6 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h3>Contacto</h3>
-          <p>Dirección: 123 Calle Ficticia, Ciudad, País</p>
           <p>Teléfono: 8305-0615</p>
           <p>Email: damriver@hotmail.es</p>
         </div>

@@ -6,6 +6,7 @@ const ComAdmin = () => {
   const [imagen, setImagen] = useState(null);
   const [nombre, setNombre] = useState("");
   const [precio, setPrecio] = useState("");
+  const [categoria, setCategoria] = useState("");
 
   const CambioBase64 = (e) => {
     const file = e.target.files[0];
@@ -24,19 +25,22 @@ const ComAdmin = () => {
         imagen: imagen,
         nombre: nombre,
         precio: precio,
+        categoria: categoria,
       };
       await postProducts(productos);
 
-      setImagen(null);
+
+      setImagen("");
       setNombre("");
       setPrecio("");
+      setCategoria("");
     } catch (error) {
       console.error("Error al agregar tarea:", error);
     }
   }
 
   return (
-    <div>
+    <div id="containerAdmin">
       <form id="formAdmin" onSubmit={meterdatos}>
         <input type="file" id="inputImagenes" onChange={CambioBase64} />
         <input
@@ -52,6 +56,18 @@ const ComAdmin = () => {
           value={precio}
           onChange={(e) => setPrecio(e.target.value)}
         />
+        <select
+          id="inputSelect"
+          onChange={(e) => setCategoria(e.target.value)}
+          value={categoria}
+        >
+          <option>Categoria</option>
+          <option>camisas</option>
+          <option>pantalones</option>
+          <option>shorts</option>
+          <option>camisas de vestir larga</option>
+          <option>camisas de vestir corta</option>
+        </select>
         <input type="submit" value="Agregar" id="btnAgregar" />
       </form>
     </div>

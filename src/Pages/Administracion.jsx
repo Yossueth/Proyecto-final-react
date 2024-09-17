@@ -1,12 +1,15 @@
 import ComAdmin from "../Components/ComAdmin";
-import MostrarProductos from "../Components/MostrarProductos";
+import MostrarProdutsAdmin from "../Components/MostrarProdutsAdmin";
+import CerrarSesionAdmin from "../Components/cerrarSesionAdmin";
+
 const Administracion = () => {
-  return (
-    <div>
-      <ComAdmin />
-      <MostrarProductos />
-    </div>
-  );
-};
+    return (
+      <div>
+        <ComAdmin />
+        <CerrarSesionAdmin />
+        <MostrarProdutsAdmin />
+      </div>
+    );
+  };
 
 export default Administracion;

@@ -2,15 +2,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { getUsers } from "../Services/users";
 import { postUsers } from "../Services/users";
 import { useState } from "react";
-import "../styles/sigup.css"
-
+import "../styles/sigup.css";
+import Swal from "sweetalert2";
 
 const FormRegistro = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [alertError, setAlertError] = useState("");
-  const [alerta, setAlerta] = useState("");
 
   const navigate = useNavigate();
 
@@ -21,9 +19,11 @@ const FormRegistro = () => {
     const userRegister = userList.find((user) => user.email === email);
 
     if (userRegister) {
-      setAlertError(
-        "Un usuario con esa dirección de correo electrónico ya está registrado 😭"
-      );
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Un usuario con esa dirección de correo electrónico ya está registrado 😭!",
+      });
       return;
     }
 
@@ -34,7 +34,7 @@ const FormRegistro = () => {
     };
 
     await postUsers(objectUsers);
-    setAlerta("Registro exitoso 👌");
+    Swal.fire("Registro exitoso 👌!");
     navigate("/");
   };
 
@@ -68,8 +68,6 @@ const FormRegistro = () => {
             required
           />
           <input type="submit" value="Registro" />
-          {alertError && <p id="error">{alertError}</p>}
-          {alerta && <p id="alerta">{alerta}</p>}
           <p id="cambio">
             Ya tienes una cuenta? <Link to="/">Login</Link>
           </p>

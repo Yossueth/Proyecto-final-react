@@ -3,20 +3,21 @@ import { FaShoppingCart, FaUser } from "react-icons/fa";
 import logo2 from "../img/logo2.png";
 import CerrarSession from "../Components/CerrarSession";
 
-const Navbar = () => {
+
+const Navbar = ({ Filtro }) => {
   return (
     <div className="navbar">
       <div className="logo">
         <img src={logo2} alt="Logo" />
       </div>
       <div className="search">
-        <input type="text" placeholder="Buscar..." />
+        <input onChange={Filtro} type="text" placeholder="Buscar..." />
       </div>
       <div className="nav">
         <div className="icono1">
-        <a className="nav-icon">
-          <FaShoppingCart size={24} />
-        </a>
+          <a className="nav-icon">
+            <FaShoppingCart size={24} />
+          </a>
         </div>
         <div className="dropdown">
           <a
@@ -27,25 +28,16 @@ const Navbar = () => {
             aria-expanded="false"
             href="/profile"
           >
-            <FaUser size={24} /><span className="caret"></span>
+            <FaUser size={24} />
+            <span className="caret"></span>
           </a>
           <ul className="dropdown-menu">
             <li>
               <a href="#">Perfil</a>
             </li>
-            <li>
-              <a href="#">Another action</a>
-            </li>
-            <li>
-              <a href="#">Something else here</a>
-            </li>
             <li role="separator" className="divider"></li>
             <li>
-              <a href="#">Separated link</a>
-            </li>
-            <li role="separator" className="divider"></li>
-            <li>
-            <CerrarSession />
+              <CerrarSession />
             </li>
           </ul>
         </div>

@@ -1,13 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { getUsers } from "../Services/users";
-import "../styles/login.css"
+import "../styles/login.css";
+import Swal from "sweetalert2";
 
 const FormLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [alertError, setAlertError] = useState("");
-  const [alerta, setAlerta] = useState("");
+
+  localStorage.setItem("Admin", false);
+  localStorage.setItem("Autenticado", false);
 
   const navigate = useNavigate();
 
@@ -15,15 +17,25 @@ const FormLogin = () => {
     e.preventDefault();
 
     const userList = await getUsers();
-    const validUsers = userList.find((user) => user.email === email);
+    const validUsers = userList.find(
+      (user) => user.email === email && user.password === password
+    );
 
     if (!validUsers) {
-      setAlertError("El correo o contraseña incorrecto");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "El correo o contraseña son incorrectos!",
+      });
       return;
     }
-    if (validUsers) {
-      setAlerta("Inicio de sesión exitoso");
-      localStorage.setItem("Autenticado", true)
+    if (email.includes("@admin")) {
+      Swal.fire("Bienvenid@ Admin!");
+      localStorage.setItem("Admin", true);
+      navigate("/administracion");
+    } else {
+      Swal.fire("Inicio de sesión exitoso!");
+      localStorage.setItem("Autenticado", true);
       navigate("/home");
       return;
     }
@@ -55,8 +67,6 @@ const FormLogin = () => {
             ¿Ya tienes una cuenta? <Link to="/sigup">Registro</Link>
           </p>
         </form>
-        {alertError && <p id="error">{alertError}</p>}
-        {alerta && <p id="alerta">{alerta}</p>}
       </div>
     </section>
   );
