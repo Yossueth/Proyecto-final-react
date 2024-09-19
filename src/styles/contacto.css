@@ -1,0 +1,76 @@
+#form-contacto {
+  background-color: #001f3f; /* Azul navy */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-left: 270px;
+}
+
+h1#title {
+  color: #f4e1c1; /* Color arena */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+label {
+  color: #f4e1c1; /* Color arena */
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d4af37; /* Color dorado */
+  background-color: #1f2933; /* Fondo oscuro */
+  color: #f4e1c1; /* Texto en color arena */
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #b87333; /* Color cobre */
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #a1602c; /* Sombra de cobre más oscuro */
+}
+
+#contact-info {
+  margin-top: 20px;
+  background-color: #001f3f; /* Azul navy */
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  color: #f4e1c1; /* Color arena */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+i.texto {
+  color: #d4af37; /* Color dorado para los íconos */
+}
