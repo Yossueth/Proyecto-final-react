@@ -6,6 +6,7 @@ import {
 import { Editar } from "./Editar";
 import "../styles/Administracion.css";
 import { useEffect, useState } from "react";
+import { postDestacados } from "../Services/destacados";
 
 const MostrarProductosAdmin = () => {
   const [productos, setProductos] = useState([]);
@@ -32,13 +33,15 @@ const MostrarProductosAdmin = () => {
   const actualizarProducto = async (editProduct) => {
     try {
       await putProducts(editProduct, editProduct.id);
-
       traerProductosAdmin();
     } catch (error) {
       console.error("Error updating product:", error);
     }
   };
 
+  const destacar = async (data) => {
+    return await postDestacados(data);
+  };
   return (
     <div id="container">
       {productos.map((showAdmin) => (
@@ -57,6 +60,14 @@ const MostrarProductosAdmin = () => {
                 producto={showAdmin}
                 actualizarProducto={actualizarProducto}
               />
+              <button
+                onClick={() => {
+                  destacar(showAdmin);
+                }}
+              >
+                {" "}
+                Destacar
+              </button>
             </div>
           </div>
         </div>

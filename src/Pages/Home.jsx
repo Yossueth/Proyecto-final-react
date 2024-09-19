@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { getProducts } from "../Services/productos";
 import { useEffect, useState } from "react";
+import Mostrardestacados from "../Components/Mostrardestacados";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -35,6 +36,7 @@ const Home = () => {
   return (
     <div>
       <Navbar Filtro={searcher} />
+      <Mostrardestacados/>
       <ComHome filtrar={results} />
       <Footer />
     </div>
