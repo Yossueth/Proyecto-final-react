@@ -2,7 +2,7 @@ import "../styles/Navbar.css";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import logo2 from "../img/logo2.png";
 import CerrarSession from "../Components/CerrarSession";
-
+import { Link } from "react-router-dom";
 
 const Navbar = ({ Filtro }) => {
   return (
@@ -33,10 +33,13 @@ const Navbar = ({ Filtro }) => {
           </a>
           <ul className="dropdown-menu">
             <li>
-              <a href="#">Perfil</a>
+              <Link to="/contacto">Contacto</Link>
+            </li>
+            <li>
+              <Link to="">Sobre Nosotros</Link>
             </li>
             <li role="separator" className="divider"></li>
-            <li>
+            <li className="cerrarSesion">
               <CerrarSession />
             </li>
           </ul>

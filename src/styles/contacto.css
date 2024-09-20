@@ -1,76 +1,85 @@
-#form-contacto {
-  background-color: #001f3f; /* Azul navy */
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  margin-left: 270px;
+.contacto {
+  background-color: #003366; /* Azul navy */
+  padding: 40px 20px;
 }
 
-h1#title {
-  color: #f4e1c1; /* Color arena */
+.contenido-seccion {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#con {
+  color: #d4af37; /* Dorado */
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-label {
-  color: #f4e1c1; /* Color arena */
-  font-size: 1.2rem;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  width: 100%;
+.fila {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 100%;
+.form-col {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff; /* Blanco para el formulario */
+  border: 2px solid #8b4513; /* Cobre */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-col input {
+  width: calc(100% - 20px);
   padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #003366; /* Azul navy */
   border-radius: 5px;
-  border: 1px solid #d4af37; /* Color dorado */
-  background-color: #1f2933; /* Fondo oscuro */
-  color: #f4e1c1; /* Texto en color arena */
   font-size: 1rem;
-  margin-bottom: 20px;
 }
 
-input[type="submit"] {
-  background-color: #b87333; /* Color cobre */
-  color: white;
-  font-size: 1.2rem;
-  padding: 10px 20px;
+.form-col button {
+  background-color: #d4af37; /* Dorado */
+  color: #fff;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
-input[type="submit"]:hover {
-  background-color: #a1602c; /* Sombra de cobre más oscuro */
+.form-col button:hover {
+  background-color: #c0a16b; /* Color dorado más oscuro */
 }
 
-#contact-info {
-  margin-top: 20px;
-  background-color: #001f3f; /* Azul navy */
-  padding: 15px;
-  border-radius: 10px;
+.form-col button .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.form-col button:hover .overlay {
+  opacity: 1;
 }
 
-li {
-  color: #f4e1c1; /* Color arena */
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.informacio {
+  position: absolute;
+  right: 90px;
+  top: 250px;
 }
 
-i.texto {
-  color: #d4af37; /* Color dorado para los íconos */
+.info ul {
+  list-style-type: none;
+}
+
+.info li {
+  color: #d4af37; /* Dorado */
 }

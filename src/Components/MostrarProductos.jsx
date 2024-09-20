@@ -2,6 +2,7 @@ import "../styles/Administracion.css";
 
 const MostrarProductos = ({ producto }) => {
   return (
+    <div>
     <div id="container" key={producto.id}>
       <div id="productos">
         <div id="cardContainer">
@@ -12,6 +13,7 @@ const MostrarProductos = ({ producto }) => {
           <div id="precio">₡{producto.precio}</div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

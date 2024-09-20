@@ -48,6 +48,7 @@ const FormLogin = () => {
         <form onSubmit={handleSubmit} id="signupForm">
           <label>Email</label>
           <input
+          id="email"
             type="email"
             placeholder="Ingrese un email"
             value={email}
@@ -56,6 +57,7 @@ const FormLogin = () => {
           />
           <label>Contraseña</label>
           <input
+          id="password"
             type="password"
             placeholder="Ingrese una contraseña"
             value={password}

@@ -8,8 +8,9 @@ import Mostrardestacados from "../Components/Mostrardestacados";
 const Home = () => {
   const [search, setSearch] = useState("");
   const [productos, setProductos] = useState([]);
+  const [searchActivo, setSearchActivo] = useState(false);
 
-  // Fetch products from API
+
   const traerProductos = async () => {
     const dataProductos = await getProducts();
     setProductos(dataProductos);
@@ -19,12 +20,22 @@ const Home = () => {
     traerProductos();
   }, []);
 
-  // Handle search input changes
+
+  useEffect(() => {
+    traerProductos();
+  }, []);
+
+  useEffect(() => {
+    setSearchActivo(search !== "");
+  }, [search]);
+
+
   const searcher = (e) => {
     setSearch(e.target.value);
   };
 
-  // Filter products based on search input
+
+
   const results = () => {
     return !search
       ? productos
@@ -36,8 +47,14 @@ const Home = () => {
   return (
     <div>
       <Navbar Filtro={searcher} />
-      <Mostrardestacados/>
-      <ComHome filtrar={results} />
+      {searchActivo ? (
+        <ComHome filtrar={results} />
+      ) : (
+        <>
+          <Mostrardestacados />
+          <ComHome filtrar={results} />
+        </>
+      )}
       <Footer />
     </div>
   );

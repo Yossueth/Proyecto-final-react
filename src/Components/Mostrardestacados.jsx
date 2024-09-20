@@ -14,9 +14,9 @@ const Mostrardestacados = () => {
     destacaerProductos();
   }, []);
 
-
   return (
     <div>
+      <h1>Productos Destacados</h1>
       <div id="container">
         {destacados.map((showDestacados) => (
           <div id="productos" key={showDestacados.id}>

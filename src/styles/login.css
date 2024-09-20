@@ -1,6 +1,6 @@
 body {
     font-family: var(--font-mono);
-    background-color: #f5f5f5; /* Fondo claro para el cuerpo, puedes cambiarlo si prefieres otro color */
+    background-color: #f5f5f5; 
   }
   
   section {
@@ -18,7 +18,7 @@ body {
     width: 100%;
     margin-bottom: 1em;
     font-size: 2.5em;
-    color: #002F6C; /* Azul Navy */
+    color: #002F6C; 
   }
   
   section form {
@@ -27,8 +27,8 @@ body {
     flex-wrap: wrap;
     max-width: 500px;
     border-radius: 10px;
-    border: 2px solid #B87333; /* Cobre */
-    background-color: #ffffff; /* Blanco, puedes cambiarlo si prefieres otro color */
+    border: 2px solid #B87333;
+    background-color: #ffffff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -37,7 +37,7 @@ body {
     padding: 0.2em;
     margin-bottom: 0.5em;
     text-align: center;
-    color: #002F6C; /* Azul Navy para el texto en etiquetas */
+    color: #002F6C; 
   }
   
   section form input {
@@ -45,15 +45,15 @@ body {
     margin-bottom: 1em;
     padding: 0.8em;
     border-radius: 5px;
-    border: 1px solid #cccccc; /* Puedes ajustar este color si lo prefieres */
-    background-color: #f9f9f9; /* Fondo claro para los campos de entrada */
+    border: 1px solid #cccccc; 
+    background-color: #f9f9f9; 
     text-align: center;
-    color: #000000; /* Color del texto en los campos de entrada */
+    color: #000000; 
   }
   
   section form input[type="submit"] {
-    background-color: #002F6C; /* Azul Navy */
-    color: #ffffff; /* Blanco para el texto del botón */
+    background-color: #002F6C; 
+    color: #ffffff; 
     font-family: var(--font-mono);
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
@@ -61,7 +61,7 @@ body {
   }
   
   section form input[type="submit"]:hover {
-    background-color: #0056b3; /* Azul más oscuro para hover, puedes cambiar a otro tono si prefieres */
+    background-color: #0056b3; 
   }
   
   section form input[type="submit"]:active {
@@ -74,19 +74,22 @@ body {
   }
   
   #error {
-    color: #dc3545; /* Rojo para errores, puedes cambiar a otro color si prefieres */
+    color: #dc3545; 
   }
   
   #alerta {
-    color: #28a745; /* Verde para alertas, puedes cambiar a otro color si prefieres */
+    color: #28a745; 
   }
   
   section p {
-    color: #333333; /* Color del texto en párrafos */
+    color: #333333; 
   }
   
   section p a {
     text-decoration: none;
-    color: #002F6C; /* Azul Navy para los enlaces */
+    color: #002F6C; 
   }
   
+  #email{
+    background-color: white;
+  }

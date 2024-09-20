@@ -6,6 +6,7 @@ const ComAdmin = () => {
   const [imagen, setImagen] = useState(null);
   const [nombre, setNombre] = useState("");
   const [precio, setPrecio] = useState("");
+  const [descripcion, setDescripcion] = useState("");
   const [categoria, setCategoria] = useState("");
 
   const CambioBase64 = (e) => {
@@ -24,14 +25,15 @@ const ComAdmin = () => {
       const productos = {
         imagen: imagen,
         nombre: nombre,
+        descripcion: descripcion,
         precio: precio,
         categoria: categoria,
       };
       await postProducts(productos);
 
-
       setImagen("");
       setNombre("");
+      setDescripcion("");
       setPrecio("");
       setCategoria("");
     } catch (error) {
@@ -48,6 +50,12 @@ const ComAdmin = () => {
           placeholder="Ingrese el nombre del producto"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Ingrese el precio"
+          value={descripcion}
+          onChange={(e) => setDescripcion(e.target.value)}
         />
 
         <input
