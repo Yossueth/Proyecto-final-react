@@ -30,7 +30,7 @@ export const Editar = ({ producto, actualizarProducto }) => {
         precio,
       };
 
-      await actualizarProducto(editProduct); 
+      await actualizarProducto(editProduct);
 
       cerrarModal();
     } catch (error) {
@@ -62,11 +62,7 @@ export const Editar = ({ producto, actualizarProducto }) => {
             𝐗
           </p>
           <label htmlFor="imagen">Imagen:</label>
-          <input
-            type="file"
-            id="imagen"
-            onChange={Base64}
-          />
+          <input type="file" id="imagen" onChange={Base64} />
           <label htmlFor="nombre">Nombre:</label>
           <input
             type="text"

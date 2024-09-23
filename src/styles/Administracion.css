@@ -45,6 +45,18 @@
   display: flex;
 }
 
-#containerAdmin{
+#containerAdmin {
   background-color: #333;
 }
+
+/* home */
+
+#listaProductos {
+  background-color: #002f6c ;
+  color: #ffffff;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

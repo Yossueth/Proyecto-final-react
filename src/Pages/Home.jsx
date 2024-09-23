@@ -10,7 +10,6 @@ const Home = () => {
   const [productos, setProductos] = useState([]);
   const [searchActivo, setSearchActivo] = useState(false);
 
-
   const traerProductos = async () => {
     const dataProductos = await getProducts();
     setProductos(dataProductos);
@@ -20,21 +19,13 @@ const Home = () => {
     traerProductos();
   }, []);
 
-
-  useEffect(() => {
-    traerProductos();
-  }, []);
-
   useEffect(() => {
     setSearchActivo(search !== "");
   }, [search]);
 
-
   const searcher = (e) => {
     setSearch(e.target.value);
   };
-
-
 
   const results = () => {
     return !search

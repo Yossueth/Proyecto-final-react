@@ -1,0 +1,76 @@
+.SobreNosotros {
+  background-color: #f0e68c; /* Color arena */
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #8b4513; /* Color cobre */
+  display: flex;
+}
+
+#texto1 {
+  margin-top: 50px;
+  width: 1000px;
+  font-size: 17px;
+}
+
+#img1 {
+  margin-left: 10px;
+}
+
+.SobreNosotros h1 {
+  color: #000080; /* Azul navy */
+}
+
+.mision {
+  background-color: #f0e68c; /* Color dorado claro */
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #8b4513; /* Color cobre */
+}
+
+.vision {
+  background-color: #f0e68c; /* Color dorado claro */
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #8b4513; /* Color cobre */
+  display: flex;
+}
+
+#texto2{
+margin-left: 10px;
+font-size: 17px;
+margin-top: 40px;
+}
+
+.img2{
+margin-left: 10px;
+}
+
+.mision h1,
+.vision h1 {
+  color: #000080; /* Azul navy */
+}
+
+.vision p {
+  color: #333; /* Color de texto general */
+  font-size: 17px;
+}
+
+.precios {
+  background-color: #f0e68c; /* Color arena */
+  padding: 20px;
+  border: 1px solid #8b4513; /* Color cobre */
+}
+
+.precios h3 {
+  color: #000080; /* Azul navy */
+}
+
+.precios ul {
+  list-style-type: none; /* Sin viñetas */
+  padding: 0;
+}
+
+.precios li {
+  margin: 10px 0;
+  color: #333; /* Color de texto general */
+}

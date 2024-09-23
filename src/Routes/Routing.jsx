@@ -6,6 +6,7 @@ import ProtectedAdmin from "./ProtectedAdmin";
 import Home from "../Pages/Home";
 import Administracion from "../Pages/Administracion";
 import Contacto from "../Pages/Contacto";
+import { AboutUs } from "../Pages/AboutUs";
 
 const Rutas = () => {
   return (
@@ -16,6 +17,7 @@ const Rutas = () => {
         <Route path="/SigUp" element={<SigUp />} />
         <Route path="/Administracion" element={<ProtectedAdmin><Administracion /></ProtectedAdmin>}/>
         <Route path="/contacto" element= {<Contacto/>}></Route>
+        <Route path="/aboutUs" element={<AboutUs/>}></Route>
       </Routes>
     </Router>
   );

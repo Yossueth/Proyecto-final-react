@@ -1,0 +1,14 @@
+body{
+background-color:  #f8f0e0;;
+}
+
+#listaProductos2 {
+    background-color: #002f6c ;
+    color: #ffffff;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+  }
+  
