@@ -2,7 +2,6 @@ import "../styles/Navbar.css";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 import logo2 from "../img/logo2.png";
 import CerrarSession from "../Components/CerrarSession";
-import { Link } from "react-router-dom";
 
 const Navbar = ({ Filtro }) => {
   return (
@@ -26,18 +25,22 @@ const Navbar = ({ Filtro }) => {
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
-            href="/profile"
           >
             <FaUser size={24} />
             <span className="caret"></span>
           </a>
           <ul className="dropdown-menu">
             <li>
-              <Link to="/contacto">Contacto</Link>
+              <a href="/contacto" target="_blank" rel="noopener noreferrer">
+                Contacto
+              </a>
             </li>
             <li>
-              <Link to="">Sobre Nosotros</Link>
+              <a href="/aboutUs" target="_blank" rel="noopener noreferrer">
+                Sobre Nosotros
+              </a>
             </li>
+
             <li role="separator" className="divider"></li>
             <li className="cerrarSesion">
               <CerrarSession />

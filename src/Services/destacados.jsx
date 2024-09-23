@@ -60,7 +60,7 @@ export async function getDestacados() {
   }
   
   // DELETE
-  export async function deletedestacados(id) {
+  export async function deleteDestacados(id) {
     try {
       const response = await fetch(`http://localhost:3000/destacados/${id}`, {
         method: "DELETE",

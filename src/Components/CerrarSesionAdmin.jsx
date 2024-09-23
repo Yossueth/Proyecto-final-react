@@ -9,10 +9,10 @@ function CerrarSesionAdmin() {
   }
 
   return (
-    <div>
-      <button id="CerrarSessionAd" onClick={cerrarSesion}>
+    <div id="">
+      <p id="CerrarSessionAd" onClick={cerrarSesion}>
         Cerrar Sesión
-      </button>
+      </p>
     </div>
   );
 }

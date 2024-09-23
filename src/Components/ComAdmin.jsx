@@ -1,6 +1,10 @@
 import "../styles/Administracion.css";
 import { useState } from "react";
 import { postProducts } from "../Services/productos";
+import { IoReorderThree } from "react-icons/io5";
+import CerrarSesionAdmin from "./CerrarSesionAdmin";
+import { Destacados } from "./Destacados";
+import Swal from "sweetalert2";
 
 const ComAdmin = () => {
   const [imagen, setImagen] = useState(null);
@@ -20,7 +24,19 @@ const ComAdmin = () => {
     }
   };
 
-  async function meterdatos() {
+  async function meterdatos(e) {
+    e.preventDefault();
+    if (
+      !imagen ||
+      !nombre.trim() ||
+      !descripcion.trim() ||
+      !precio.trim() ||
+      !categoria
+    ) {
+      Swal.fire("Todos los campos tiene  que estar llenos !");
+      return;
+    }
+
     try {
       const productos = {
         imagen: imagen,
@@ -43,7 +59,30 @@ const ComAdmin = () => {
 
   return (
     <div id="containerAdmin">
-      <form id="formAdmin" onSubmit={meterdatos}>
+      <div className="dropdown">
+        <a
+          className="dropdown-toggle"
+          data-toggle="dropdown"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <IoReorderThree size={28} id="icono" />
+          <span className="caret"></span>
+        </a>
+        <ul className="dropdown-menu">
+          <li>
+            <Destacados />
+          </li>
+
+          <li role="separator" className="divider"></li>
+          <li className="cerrarAdmin">
+            <CerrarSesionAdmin />
+          </li>
+        </ul>
+      </div>
+      <h1 id="tituloAdmin">Administracion</h1>
+      <form id="formAdmin">
         <input type="file" id="inputImagenes" onChange={CambioBase64} />
         <input
           type="text"
@@ -53,7 +92,7 @@ const ComAdmin = () => {
         />
         <input
           type="text"
-          placeholder="Ingrese el precio"
+          placeholder="Ingrese la descripcion"
           value={descripcion}
           onChange={(e) => setDescripcion(e.target.value)}
         />
@@ -71,12 +110,20 @@ const ComAdmin = () => {
         >
           <option>Categoria</option>
           <option>camisas</option>
+          <option>uniformes</option>
           <option>pantalones</option>
           <option>shorts</option>
           <option>camisas de vestir larga</option>
           <option>camisas de vestir corta</option>
         </select>
-        <input type="submit" value="Agregar" id="btnAgregar" />
+        <button
+          type="submit"
+          value="Agregar"
+          id="btnAgregar"
+          onClick={meterdatos}
+        >
+          enviar
+        </button>
       </form>
     </div>
   );

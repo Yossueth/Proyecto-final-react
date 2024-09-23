@@ -5,28 +5,55 @@ import {
 } from "../Services/productos";
 import { Editar } from "./Editar";
 import "../styles/Administracion.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { postDestacados } from "../Services/destacados";
+import Swal from "sweetalert2";
 
 const MostrarProductosAdmin = () => {
   const [productos, setProductos] = useState([]);
 
-  const traerProductosAdmin = async () => {
-    const dataProductos = await getProducts();
-    setProductos(dataProductos);
-  };
+  const traerProductosAdmin = useCallback(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await getProducts();
+        setProductos(response);
+      } catch (error) {
+        console.error("Error fetching Products", error);
+      }
+    };
+    fetchProducts();
+  });
 
-  useEffect(() => {
-    traerProductosAdmin();
-  }, []);
+  useEffect(() => traerProductosAdmin(), [traerProductosAdmin]);
 
   const eliminar = async (id) => {
-    try {
-      await deleteProducts(id);
+    const result = await Swal.fire({
+      title: "¿Estás seguro?",
+      text: "¡No podrás revertir esto!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, ¡elimínalo!",
+    });
 
-      traerProductosAdmin();
-    } catch (error) {
-      console.error("Error deleting product:", error);
+    if (result.isConfirmed) {
+      try {
+        await deleteProducts(id);
+        await Swal.fire({
+          title: "¡Eliminado!",
+          text: "Tu archivo ha sido eliminado.",
+          icon: "success",
+        });
+        traerProductosAdmin();
+      } catch (error) {
+        console.error("Error al eliminar el producto:", error);
+        Swal.fire({
+          title: "¡Error!",
+          text: "Hubo un problema al eliminar el producto.",
+          icon: "error",
+        });
+      }
     }
   };
 
@@ -35,13 +62,14 @@ const MostrarProductosAdmin = () => {
       await putProducts(editProduct, editProduct.id);
       traerProductosAdmin();
     } catch (error) {
-      console.error("Error updating product:", error);
+      console.error("Error al actualizar el producto:", error);
     }
   };
 
   const destacar = async (data) => {
     return await postDestacados(data);
   };
+
   return (
     <div id="container">
       {productos.map((showAdmin) => (
@@ -65,7 +93,6 @@ const MostrarProductosAdmin = () => {
                   destacar(showAdmin);
                 }}
               >
-                {" "}
                 Destacar
               </button>
             </div>

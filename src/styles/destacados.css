@@ -12,3 +12,19 @@ background-color:  #f8f0e0;;
     margin-top: 0px;
   }
   
+  #modalDestacados{
+    margin-right: 20px;
+  }
+
+  #cerrarModalDestacados{
+    cursor: pointer;
+    color: red;
+    margin: 0px;
+    margin-left: 92%;
+    top: 1px;
+    position: absolute;
+  }
+
+  #btnAbrirModalDestacados{
+    margin-left: 10px;
+  }

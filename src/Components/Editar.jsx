@@ -1,24 +1,23 @@
 import { useState } from "react";
 import "../styles/Editar.css";
+import Swal from "sweetalert2";
 
 export const Editar = ({ producto, actualizarProducto }) => {
   const [imagen, setImagen] = useState(producto.imagen || "");
   const [nombre, setNombre] = useState(producto.nombre || "");
   const [precio, setPrecio] = useState(producto.precio || "");
   const [modalVisible, setModalVisible] = useState(false);
-  const [error, setError] = useState("");
 
   const abrirModal = () => setModalVisible(true);
   const cerrarModal = () => setModalVisible(false);
 
   const editar = async () => {
     if (!producto.id) {
-      setError("ID no válido");
       return;
     }
 
     if (!imagen.trim() || !nombre || !precio) {
-      setError("Todos los campos son obligatorios");
+      Swal.fire("¡Todos los campos tienen que estar llenos!");
       return;
     }
 
@@ -31,10 +30,11 @@ export const Editar = ({ producto, actualizarProducto }) => {
       };
 
       await actualizarProducto(editProduct);
+      Swal.fire("¡Actualizado!", "El producto se actualizó correctamente.", "success"); // Alerta de éxito
 
       cerrarModal();
     } catch (error) {
-      setError("Error al actualizar el producto");
+      Swal.fire("¡Error!", "Hubo un problema al actualizar.", "error");
       console.error(error);
     }
   };
@@ -80,7 +80,6 @@ export const Editar = ({ producto, actualizarProducto }) => {
           <button id="btnConfirmarEdit" onClick={editar}>
             Editar
           </button>
-          {error && <p className="error">{error}</p>}
         </dialog>
       )}
     </div>

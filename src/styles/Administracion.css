@@ -31,6 +31,7 @@
   font-size: 20px;
   margin-left: 3px;
   color: black;
+  background-color: ;
 }
 
 #precio {
@@ -49,14 +50,84 @@
   background-color: #333;
 }
 
+#tituloAdmin {
+  text-align: center;
+}
+
+#containerAdmin {
+  background-color: #f5f5dc; /* Sand color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#formAdmin {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="file"] {
+  border: 2px solid #003366; /* Navy Blue */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input[type="text"],
+select {
+  border: 2px solid #a0522d; /* Copper */
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+  color: #888; /* Placeholder color */
+}
+
+#inputSelect {
+  background-color: #ffffff; /* Gold */
+  color: #003366; /* Navy Blue text */
+}
+
+#btnAgregar {
+  background-color: #003366; /* Navy Blue */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#btnAgregar:hover {
+  background-color: #001f33; /* Darker Navy for hover effect */
+}
+
+#cerrarSesionAdmin {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+
+#icono {
+  margin-left: 98%;
+}
+
+#CerrarSessionAd {
+  margin-left: 10px;
+  cursor: pointer;
+  color: red;
+}
+
 /* home */
 
 #listaProductos {
-  background-color: #002f6c ;
+  background-color: #002f6c;
   color: #ffffff;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
