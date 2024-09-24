@@ -1,5 +1,5 @@
 import "../styles/Administracion.css";
-import MostrarProductos from "./MostrarProductos";
+import CardHome from "./CardHome";
 
 const ComHome = ({ filtrar }) => {
   return (
@@ -7,7 +7,7 @@ const ComHome = ({ filtrar }) => {
       <h1 id="listaProductos">Lista de Productos </h1>
     <div id="container">
       {filtrar().map((producto) => (
-        <MostrarProductos producto={producto} key={producto.id} />
+        <CardHome producto={producto} key={producto.id} />
       ))}
     </div>
     </div>

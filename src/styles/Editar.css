@@ -11,3 +11,15 @@
   top: 1px;
   position: absolute;
 }
+
+#btnAbrirModal {
+  background-color: green;
+}
+
+#btnDestacar {
+  background-color: gold;
+}
+
+#btnEliminar {
+  background-color: red;
+}

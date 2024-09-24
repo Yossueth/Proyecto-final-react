@@ -1,12 +1,12 @@
 import ComAdmin from "../Components/ComAdmin";
-import MostrarProdutsAdmin from "../Components/MostrarProdutsAdmin";
+import CardAdmin from "../Components/CardAdmin";
 
 
 const Administracion = () => {
     return (
       <div>
         <ComAdmin />
-        <MostrarProdutsAdmin />
+        <CardAdmin />
       </div>
     );
   };

@@ -1,3 +1,9 @@
+#titulo {
+  text-align: center;
+  background-color: #f0e68c;
+  color: #000080;
+}
+
 .SobreNosotros {
   background-color: #f0e68c; /* Color arena */
   padding: 20px;
@@ -35,14 +41,14 @@
   display: flex;
 }
 
-#texto2{
-margin-left: 10px;
-font-size: 17px;
-margin-top: 40px;
+#texto2 {
+  margin-left: 10px;
+  font-size: 17px;
+  margin-top: 40px;
 }
 
-.img2{
-margin-left: 10px;
+.img2 {
+  margin-left: 10px;
 }
 
 .mision h1,

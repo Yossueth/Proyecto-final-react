@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { getProducts } from "../Services/productos";
 import { useEffect, useState } from "react";
-import Mostrardestacados from "../Components/Mostrardestacados";
+import CardDestacados from "../Components/CardDestacados";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -42,7 +42,7 @@ const Home = () => {
         <ComHome filtrar={results} />
       ) : (
         <>
-          <Mostrardestacados />
+          <CardDestacados />
           <ComHome filtrar={results} />
         </>
       )}
