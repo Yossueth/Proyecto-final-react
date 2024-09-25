@@ -1,7 +1,6 @@
 #container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-
   margin-left: 5px;
   justify-content: center;
   margin-top: 5px;
@@ -17,12 +16,13 @@
 
 #imagen {
   height: 70%;
-  border-bottom: solid black 1px;
+  width: 100vw;
+  /* border-bottom: solid black 1px; */
 }
 
 #imagen img {
-  max-width: 235px;
-  min-width: 235px;
+  /* max-width: 235px; */
+  width: 235px;
   height: 100%;
 }
 
@@ -54,7 +54,7 @@
 }
 
 #containerAdmin {
-  background-color: #f5f5dc; /* Sand color */
+  background-color: #f5f5dc;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -67,30 +67,30 @@
 }
 
 input[type="file"] {
-  border: 2px solid #003366; /* Navy Blue */
+  border: 2px solid #003366;
   border-radius: 5px;
   padding: 10px;
 }
 
 input[type="text"],
 select {
-  border: 2px solid #a0522d; /* Copper */
+  border: 2px solid #a0522d;
   border-radius: 5px;
   padding: 10px;
   font-size: 16px;
 }
 
 input[type="text"]::placeholder {
-  color: #888; /* Placeholder color */
+  color: #888;
 }
 
 #inputSelect {
-  background-color: #ffffff; /* Gold */
-  color: #003366; /* Navy Blue text */
+  background-color: #ffffff;
+  color: #003366;
 }
 
 #btnAgregar {
-  background-color: #003366; /* Navy Blue */
+  background-color: #003366;
   color: white;
   padding: 10px;
   border: none;
@@ -101,7 +101,7 @@ input[type="text"]::placeholder {
 }
 
 #btnAgregar:hover {
-  background-color: #001f33; /* Darker Navy for hover effect */
+  background-color: #001f33;
 }
 
 #cerrarSesionAdmin {
@@ -129,4 +129,45 @@ input[type="text"]::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 320px) {
+  #container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 30px;
+  }
+
+  #cardContainer {
+    width: 74%;
+    height: 98%;
+    margin: 5px 0;
+    border: solid 1.5px #333;
+  }
+  #imagen {
+    height: 50vh;
+  }
+  #imagen img {
+    width: 74.6%; 
+  }
+  #nombre,
+  #precio {
+    font-size: 16px;
+    margin-left: 2px;
+  }
+
+  input[type="text"],
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #btnAgregar {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #listaProductos {
+    height: auto;
+    font-size: 16px;
+  }
 }

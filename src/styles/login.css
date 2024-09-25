@@ -1,95 +1,127 @@
 body {
-    font-family: var(--font-mono);
-    background-color: #f5f5f5; 
+  font-family: var(--font-mono);
+  background-color: #f5f5f5;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin-top: -70px;
+}
+
+section h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+  color: #002f6c;
+}
+
+section form {
+  padding: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 2px solid #b87333;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section form label {
+  width: 100%;
+  padding: 0.2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: #002f6c;
+}
+
+section form input {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.8em;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  background-color: #f9f9f9;
+  text-align: center;
+  color: #000000;
+}
+
+section form input[type="submit"] {
+  background-color: #002f6c;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+section form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+section form input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+
+
+section p {
+  color: #333333;
+}
+
+section p a {
+  text-decoration: none;
+  color: #1773ec;
+}
+
+#email {
+  background-color: white;
+}
+
+@media (max-width: 320px) {
+  body {
+    padding: 0.5em;
   }
-  
+
   section {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    margin-top: -70px;
+    padding: 0.5em;
+    margin-top: -50px;
   }
-  
+
   section h2 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 1em;
-    font-size: 2.5em;
-    color: #002F6C; 
+    font-size: 2em;
   }
-  
+
   section form {
-    padding: 1.5em;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 500px;
-    border-radius: 10px;
-    border: 2px solid #B87333;
-    background-color: #ffffff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    max-width: 90%;
   }
-  
+
   section form label {
-    width: 100%;
-    padding: 0.2em;
-    margin-bottom: 0.5em;
-    text-align: center;
-    color: #002F6C; 
+    font-size: 0.9em;
   }
-  
+
   section form input {
-    width: 100%;
-    margin-bottom: 1em;
-    padding: 0.8em;
-    border-radius: 5px;
-    border: 1px solid #cccccc; 
-    background-color: #f9f9f9; 
-    text-align: center;
-    color: #000000; 
+    padding: 0.6em;
+    font-size: 0.9em;
   }
-  
+
   section form input[type="submit"] {
-    background-color: #002F6C; 
-    color: #ffffff; 
-    font-family: var(--font-mono);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-    border: none;
+    font-size: 0.9em;
+    padding: 0.8em;
   }
-  
-  section form input[type="submit"]:hover {
-    background-color: #0056b3; 
-  }
-  
-  section form input[type="submit"]:active {
-    transform: scale(0.98);
-  }
-  
-  #alerta, #error {
-    margin-top: 1em;
-    text-align: center;
-  }
-  
+
+  #alerta,
   #error {
-    color: #dc3545; 
+    font-size: 0.9em;
   }
-  
-  #alerta {
-    color: #28a745; 
-  }
-  
+
   section p {
-    color: #333333; 
+    font-size: 0.9em;
   }
-  
-  section p a {
-    text-decoration: none;
-    color: #002F6C; 
-  }
-  
-  #email{
-    background-color: white;
-  }
+}

@@ -1,5 +1,5 @@
 .contacto {
-  background-color: #003366; /* Azul navy */
+  background-color: #003366;
   padding: 40px 20px;
 }
 
@@ -10,7 +10,7 @@
 }
 
 #con {
-  color: #d4af37; /* Dorado */
+  color: #d4af37;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
@@ -24,8 +24,8 @@
 .form-col {
   flex: 1;
   padding: 20px;
-  background-color: #fff; /* Blanco para el formulario */
-  border: 2px solid #8b4513; /* Cobre */
+  background-color: #fff;
+  border: 2px solid #8b4513;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -34,13 +34,13 @@
   width: calc(100% - 20px);
   padding: 10px;
   margin: 10px 0;
-  border: 2px solid #003366; /* Azul navy */
+  border: 2px solid #003366;
   border-radius: 5px;
   font-size: 1rem;
 }
 
 .form-col button {
-  background-color: #d4af37; /* Dorado */
+  background-color: #d4af37;
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -52,7 +52,7 @@
 }
 
 .form-col button:hover {
-  background-color: #c0a16b; /* Color dorado más oscuro */
+  background-color: #c0a16b;
 }
 
 .form-col button .overlay {
@@ -81,5 +81,49 @@
 }
 
 .info li {
-  color: #d4af37; /* Dorado */
+  color: #d4af37;
+}
+
+@media (max-width: 320px) {
+  .contenido-seccion {
+    padding: 10px;
+  }
+
+  #con {
+    font-size: 2rem;
+  }
+
+  .fila {
+    flex-direction: column;
+  }
+
+  .form-col {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .form-col input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .form-col button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .informacio {
+    position: absolute;
+    right: 90px;
+    top: 400px;
+  }
+
+  .info ul {
+    list-style-type: none;
+  }
+
+  .info li {
+    color: #d4af37;
+  }
 }

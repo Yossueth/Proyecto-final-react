@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom";
+
 const ProtectedAdmin = ({ children }) => {
   const AutenticadoAdmin = localStorage.getItem("Admin") === "true";
 

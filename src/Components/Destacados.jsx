@@ -23,7 +23,7 @@ export const Destacados = () => {
       }
     };
     fetchProducts(); // Llama a la función para obtener los productos.
-  }, []); // Dependencia vacia para ejecutar solo al montar.
+  }); // Dependencia vacia para ejecutar solo al montar.
 
   // Hook que se ejecuta al montar el componente para obtener los productos destacados.
   useEffect(() => productosDestacados(), [productosDestacados]);

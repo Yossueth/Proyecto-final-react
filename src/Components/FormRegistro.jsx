@@ -50,7 +50,6 @@ const FormRegistro = () => {
       <section className="section">
         <h2>Registro</h2>
         <form id="signupForm" onSubmit={handleSubmit}>
-          {" "}
           {/* Maneja el envío del formulario. */}
           <label>Nombre</label>
           <input

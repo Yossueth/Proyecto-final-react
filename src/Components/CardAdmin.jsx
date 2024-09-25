@@ -3,11 +3,11 @@ import {
   getProducts,
   putProducts,
 } from "../Services/productos";
-import { Editar } from "./Editar"; 
+import { Editar } from "./Editar";
 import "../styles/Administracion.css";
 import { useCallback, useEffect, useState } from "react";
-import { postDestacados } from "../Services/destacados"; 
-import Swal from "sweetalert2"; 
+import { postDestacados } from "../Services/destacados";
+import Swal from "sweetalert2";
 
 const CardAdmin = () => {
   const [productos, setProductos] = useState([]); // Estado para almacenar productos.
@@ -50,7 +50,7 @@ const CardAdmin = () => {
         });
         traerProductosAdmin(); // Refresca la lista de productos.
       } catch (error) {
-        console.error("Error al eliminar el producto:", error); 
+        console.error("Error al eliminar el producto:", error);
         Swal.fire({
           title: "¡Error!",
           text: "Hubo un problema al eliminar el producto.",
@@ -83,10 +83,10 @@ const CardAdmin = () => {
           <div id="productos">
             <div id="cardContainer">
               <div id="imagen">
-                <img src={showAdmin.imagen} alt={showAdmin.nombre} /> 
+                <img src={showAdmin.imagen} alt={showAdmin.nombre} />
               </div>
-              <div id="nombre">{showAdmin.nombre}</div> 
-              <div id="precio">₡{showAdmin.precio}</div> 
+              <div id="nombre">{showAdmin.nombre}</div>
+              <div id="precio">₡{showAdmin.precio}</div>
             </div>
             <div id="botones">
               <button id="btnEliminar" onClick={() => eliminar(showAdmin.id)}>
@@ -96,12 +96,7 @@ const CardAdmin = () => {
                 producto={showAdmin}
                 actualizarProducto={actualizarProducto}
               />
-              <button
-                id="btnDestacar"
-                onClick={() => {
-                  destacar(showAdmin);
-                }}
-              >
+              <button id="btnDestacar"onClick={() => {destacar(showAdmin);}}>
                 Destacar
               </button>
             </div>
@@ -112,4 +107,4 @@ const CardAdmin = () => {
   );
 };
 
-export default CardAdmin; 
+export default CardAdmin;

@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { getDestacados } from "../Services/destacados"; 
-import "../styles/destacados.css"; 
+import React, { useEffect, useState, useCallback } from "react";
+import { getDestacados } from "../Services/destacados";
+import "../styles/destacados.css";
 
 const CardDestacados = () => {
   const [destacados, setDestacados] = useState([]); // Estado para almacenar productos destacados.
 
-  // Función para obtener productos destacados del servidor.
-  const destacaerProductos = async () => {
-    const data = await getDestacados(); // Llama a la función que obtiene los destacados.
-    setDestacados(data); // Actualiza el estado con los productos destacados obtenidos.
-  };
-
-  // Hook que se ejecuta al montar el componente para obtener los productos destacados.
-  useEffect(() => {
-    destacaerProductos(); // Llama a la funcion para obtener los destacados.
-  }, []); // El array vacío asegura que se ejecute solo una vez al montar.
+  // Funcion para obtener productos desde el servidor.
+  const destacaerProductos = useCallback(() => {
+    const fetchDestacados = async () => {
+      try {
+        const response = await getDestacados(); // Llama a la función que obtiene los productos.
+        setDestacados(response); // Actualiza el estado con los productos obtenidos.
+      } catch (error) {
+        console.error("Error fetching Products", error); // Manejo de errores.
+      }
+    };
+    fetchDestacados();
+  });
+  // Hook que se ejecuta al montar el componente y cuando cambia traerProductosAdmin.
+  useEffect(() => destacaerProductos(), [destacaerProductos]);
 
   return (
     <div>

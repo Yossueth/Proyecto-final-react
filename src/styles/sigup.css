@@ -1,6 +1,6 @@
 body {
   font-family: var(--font-mono);
-  background-color: #f5f5f5; /* Fondo claro para el cuerpo, puedes cambiarlo si quieres usar otro color */
+  background-color: #f5f5f5;
 }
 
 .section {
@@ -18,7 +18,7 @@ section h2 {
   width: 100%;
   margin-bottom: 1em;
   font-size: 2.5em;
-  color: #002f6c; /* Azul Navy */
+  color: #002f6c;
 }
 
 section form {
@@ -27,8 +27,8 @@ section form {
   flex-wrap: wrap;
   max-width: 500px;
   border-radius: 10px;
-  border: 2px solid #b87333; /* Cobre */
-  background-color: #ffffff; /* Blanco, puedes cambiar a otro color si lo prefieres */
+  border: 2px solid #b87333;
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -37,7 +37,7 @@ section form label {
   padding: 0.2em;
   margin-bottom: 0.5em;
   text-align: center;
-  color: #333333; /* Color del texto en etiquetas */
+  color: #333333;
 }
 
 section form input {
@@ -45,15 +45,15 @@ section form input {
   margin-bottom: 1em;
   padding: 0.8em;
   border-radius: 5px;
-  border: 1px solid #cccccc; /* Puedes ajustar si necesitas un color diferente aquí */
-  background-color: #f9f9f9; /* Fondo claro para los campos de entrada */
+  border: 1px solid #cccccc;
+  background-color: #f9f9f9;
   text-align: center;
-  color: #000000; /* Color del texto en los campos de entrada */
+  color: #000000;
 }
 
 section form input[type="submit"] {
-  background-color: #002f6c; /* Azul Navy */
-  color: #ffffff; /* Blanco para el texto del botón */
+  background-color: #002f6c;
+  color: #ffffff;
   font-family: var(--font-mono);
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
@@ -61,32 +61,62 @@ section form input[type="submit"] {
 }
 
 section form input[type="submit"]:hover {
-  background-color: #0056b3; /* Azul más oscuro para hover, puedes cambiar a otro tono si prefieres */
+  background-color: #0056b3;
 }
 
 section form input[type="submit"]:active {
   transform: scale(0.98);
 }
 
-#alerta,
-#error {
-  margin-top: 1em;
-  text-align: center;
-}
-
-#error {
-  color: #dc3545; /* Rojo para errores, puedes cambiarlo si quieres usar otro color */
-}
-
-#alerta {
-  color: #28a745; /* Verde para alertas, puedes cambiarlo si prefieres otro color */
-}
-
 section p {
-  color: #333333; /* Color del texto en párrafos */
+  color: #333333;
 }
 
 section p a {
   text-decoration: none;
-  color: #002f6c; /* Azul Navy para los enlaces */
+  color: #002f6c;
+}
+
+@media (max-width: 320px) {
+  body {
+    padding: 0.5em;
+  }
+
+  .section {
+    padding: 0.5em;
+    margin-top: -30px;
+    height: auto;
+  }
+
+  section h2 {
+    font-size: 1.8em;
+  }
+
+  section form {
+    padding: 1em;
+    max-width: 90%;
+  }
+
+  section form label {
+    font-size: 0.9em;
+  }
+
+  section form input {
+    padding: 0.6em;
+    font-size: 0.9em;
+  }
+
+  section form input[type="submit"] {
+    font-size: 0.9em;
+    padding: 0.8em;
+  }
+
+  #alerta,
+  #error {
+    font-size: 0.9em;
+  }
+
+  section p {
+    font-size: 0.9em;
+  }
 }

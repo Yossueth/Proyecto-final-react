@@ -2,81 +2,125 @@
   text-align: center;
   background-color: #f0e68c;
   color: #000080;
+  padding: 10px;
 }
 
 .SobreNosotros {
-  background-color: #f0e68c; /* Color arena */
+  background-color: #f0e68c;
   padding: 20px;
   text-align: center;
-  border: 1px solid #8b4513; /* Color cobre */
+  border: 1px solid #8b4513;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #texto1 {
   margin-top: 50px;
-  width: 1000px;
-  font-size: 17px;
+  width: 90%;
+  max-width: 1000px;
+  font-size: 1rem;
 }
 
 #img1 {
   margin-left: 10px;
+  max-width: 100%;
 }
 
 .SobreNosotros h1 {
-  color: #000080; /* Azul navy */
+  color: #000080;
 }
 
-.mision {
-  background-color: #f0e68c; /* Color dorado claro */
+.mision, .vision {
+  background-color: #f0e68c;
   padding: 20px;
   margin: 20px 0;
-  border: 1px solid #8b4513; /* Color cobre */
-}
-
-.vision {
-  background-color: #f0e68c; /* Color dorado claro */
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid #8b4513; /* Color cobre */
+  border: 1px solid #8b4513;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #texto2 {
   margin-left: 10px;
-  font-size: 17px;
+  font-size: 1rem;
   margin-top: 40px;
 }
 
 .img2 {
   margin-left: 10px;
+  max-width: 100%;
 }
 
 .mision h1,
 .vision h1 {
-  color: #000080; /* Azul navy */
+  color: #000080;
 }
 
 .vision p {
-  color: #333; /* Color de texto general */
-  font-size: 17px;
+  color: #333;
+  font-size: 1rem;
 }
 
 .precios {
-  background-color: #f0e68c; /* Color arena */
+  background-color: #f0e68c;
   padding: 20px;
-  border: 1px solid #8b4513; /* Color cobre */
+  border: 1px solid #8b4513;
 }
 
 .precios h3 {
-  color: #000080; /* Azul navy */
+  color: #000080;
 }
 
 .precios ul {
-  list-style-type: none; /* Sin viñetas */
+  list-style-type: none;
   padding: 0;
 }
 
 .precios li {
   margin: 10px 0;
-  color: #333; /* Color de texto general */
+  color: #333;
+}
+
+@media (max-width: 320px) {
+  #titulo {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .SobreNosotros {
+    padding: 15px;
+  }
+
+  #texto1 {
+    font-size: 0.9rem;
+    margin-top: 30px;
+  }
+
+  .mision, .vision {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  #texto2 {
+    font-size: 0.9rem;
+    margin-top: 30px;
+  }
+
+  .precios {
+    padding: 15px;
+  }
+
+  .precios h3 {
+    font-size: 1.2rem;
+  }
+
+  .precios li {
+    font-size: 0.9rem;
+  }
+
+  img {
+    max-width: 90%;
+    height: auto;
+  }
 }
